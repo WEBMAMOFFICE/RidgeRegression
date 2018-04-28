@@ -18,6 +18,6 @@ for n in range(0, len(X)):
     ax.scatter(y, X[n],  color='red', linewidth=3)
     ax.scatter(6, lr.coef_[n] * 6 + lr.intercept_,  color='#FF00FF', linewidth=3)
     ax.plot(Y0, Y6, color='green', linewidth=3)
-ax.set_ylim(-1, 8)
-ax.set_xlim(-1, 8)
+#ax.set_ylim(-1, 8)
+#ax.set_xlim(-1, 8)
 plt.show()
