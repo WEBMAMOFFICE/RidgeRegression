@@ -22,7 +22,7 @@ fig = plt.figure()
 ax = fig.add_subplot(111)
 for n in range(0, len(X)):
     n1 = n % 2
-    color = '#%s%s%s%s%s%s' % (n1+5, 8-n1, n1+2, n1, n1+3, n1+4)
+    color = '#%s%s%s%s%s%s' % (n1+5, 8-n1, 8-n1, 8-n1, n1+3, n1+4)
     ax.scatter(y, [X[0][n], X[1][n], X[2][n], X[3][n], X[4][n]],  color=color, linewidth=3)
     ax.scatter(6, sum(lr.coef_) * 6 + lr.intercept_,  color='#FF00FF', linewidth=3)
 Y0 = [sum(lr.coef_) * 0 + lr.intercept_, 6]
