@@ -21,9 +21,10 @@ print("Coeficient of Determination R² = ", round(lrR2, 2))
 fig = plt.figure()
 ax = fig.add_subplot(111)
 for n in range(0, len(X)):
-    n1 = n % 2
-    color = '#%s%s%s%s%s%s' % (n1+5, 8-n1, 8-n1, 8-n1, n1+3, n1+4)
-    ax.scatter(y, [X[0][n], X[1][n], X[2][n], X[3][n], X[4][n]],  color=color, linewidth=3)
+    n1 = int("FF0000", 16) * ((n + 2) * 2)
+    color = "#%s" % (hex(n1)[2:],)
+    ax.scatter(y, [X[0][n], X[1][n], X[2][n], X[3][n], X[4][n]],  color=color[0:7], linewidth=3)
+    ax.plot(y, [X[0][n], X[1][n], X[2][n], X[3][n], X[4][n]], ls='solid', lw=1.4, aa=True, color=color[0:7])
     ax.scatter(6, sum(lr.coef_) * 6 + lr.intercept_,  color='#FF00FF', linewidth=3)
 Y0 = [sum(lr.coef_) * 0 + lr.intercept_, 6]
 Y6 = [sum(lr.coef_) * 0 + lr.intercept_, sum(lr.coef_) * 6 + lr.intercept_]
